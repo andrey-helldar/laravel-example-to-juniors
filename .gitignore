@@ -1,16 +1,9 @@
 /vendor
 /node_modules
-/public
-!/public/.htaccess
-!/public/favicon.ico
-!/public/index.php
-!/public/robots.txt
-!/public/web.config
+/public/build
 /nbproject
 /.idea
 Homestead.yaml
 Homestead.json
 .env
-_ide_helper.php
-.phpstorm.meta.php
 *npm-debug.log*
