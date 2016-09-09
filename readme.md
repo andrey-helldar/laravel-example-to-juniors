@@ -35,8 +35,5 @@ Alternately, follow these steps:
 	git clone https://github.com/andrey-helldar/laravel-example-to-juniors.git
 
 	composer install
-	npm install --global gulp-cli
-	npm install --no-bin-links
-	npm rebuild node-sass
-	npm install jquery hammerjs vue-async-data
+	npm install
 	gulp

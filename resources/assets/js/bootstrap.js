@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 
 /**
@@ -8,7 +7,7 @@ window._ = require('lodash');
  */
 
 window.$ = window.jQuery = require('jquery');
-require('../vendor/materialize-css/js/bin/materialize.min');
+require('../../../node_modules/materialize-css/dist/js/materialize.min');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -17,7 +16,7 @@ require('../vendor/materialize-css/js/bin/materialize.min');
  */
 
 window.Vue = require('vue');
-var VueResource = require('vue-resource');
+var VueResource  = require('vue-resource');
 var VueAsyncData = require('vue-async-data');
 
 Vue.use(VueResource);
@@ -29,11 +28,14 @@ Vue.use(VueAsyncData);
  * included with Laravel will automatically verify the header's value.
  */
 
-Vue.http.interceptors.push((request, next) => {
-    request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
+Vue.http.interceptors.push(
+    (request, next) =>
+    {
+        request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
-    next();
-});
+        next();
+    }
+);
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -52,7 +54,7 @@ Vue.http.interceptors.push((request, next) => {
  * Other
  */
 window.app = {
-	debug: true // Enable debug mode.
+    debug: true // Enable debug mode.
 };
 
 
@@ -60,7 +62,7 @@ window.app = {
  * Other parameters of Vue.js.
  */
 Vue.config.async = true;
-Vue.config.devtools = app.debug; // DevTools mode is only available in development build. In production set FALSE !
-Vue.config.debug = app.debug; // Debug mode is only available in development build. In production set FALSE !
-Vue.config.silent = !app.debug; //Suppress all Vue.js logs and warnings.
+Vue.config.devtools         = app.debug; // DevTools mode is only available in development build. In production set FALSE !
+Vue.config.debug            = app.debug; // Debug mode is only available in development build. In production set FALSE !
+Vue.config.silent           = !app.debug; //Suppress all Vue.js logs and warnings.
 Vue.config.unsafeDelimiters = ['{!!', '!!}']; // Change the raw HTML interpolation delimiters.

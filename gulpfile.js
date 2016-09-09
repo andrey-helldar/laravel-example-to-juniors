@@ -15,18 +15,17 @@ elixir.config.sourcemaps = true;
  |
  */
 
- elixir(mix =>
+elixir(mix =>
        {
            var
                assets       = 'resources/assets/',
-               vendor       = '../vendor/',
                node_modules = '../../../node_modules/';
 
            mix
                .sass('app.scss', 'public/css/app.css')
 
                .copy(assets + 'images', 'public/images')
-               .copy(assets + 'vendor/materialize-css/fonts', 'public/build/fonts')
+               .copy(node_modules + 'materialize-css/fonts', 'public/build/fonts')
 
                .webpack('app.js')
 
