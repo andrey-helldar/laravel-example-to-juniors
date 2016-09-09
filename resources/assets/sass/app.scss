@@ -1,0 +1,25 @@
+// Variables
+@import "variables";
+
+// MaterializeCSS
+@import "materialize";
+
+body {
+	background-color: $body-bg;
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+	.container{
+		background-color: $body-bg;
+
+	}
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.brand-logo {
+	font-weight: 300;
+}
