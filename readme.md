@@ -25,3 +25,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+# How to install
+
+Alternately, follow these steps:
+
+	// Clone repository
+	git clone https://github.com/andrey-helldar/laravel-example-to-juniors.git
+
+	composer install
+	npm install --global gulp-cli
+	npm install --no-bin-links
+	npm rebuild node-sass
+	npm install jquery hammerjs vue-async-data
+	gulp
