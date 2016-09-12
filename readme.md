@@ -31,9 +31,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Alternately, follow these steps:
 
+	Rename file `.env.example` to `.env`.
+	
 	// Clone repository
 	git clone https://github.com/andrey-helldar/laravel-example-to-juniors.git
 
 	composer install
-	npm install
+	npm install // for unix or "npm install --no-bin-links" for windows
+	npm rebuild node-sass
 	gulp
+
+Enjoy! :)

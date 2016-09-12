@@ -39,14 +39,10 @@
 @import "../../../node_modules/materialize-css/sass/components/date_picker/default.time";
 
 body {
-    background-color: lightgrey;
+    background-color: whitesmoke;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
-    .container {
-        background-color: whitesmoke;
-    }
 }
 
 main {

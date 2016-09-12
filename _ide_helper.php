@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.7 on 2016-09-09.
+ * Generated for Laravel 5.3.8 on 2016-09-12.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -2546,6 +2546,57 @@ namespace {
          */
         public static function getQueuedCookies(){
             return \Illuminate\Cookie\CookieJar::getQueuedCookies();
+        }
+        
+    }
+
+
+    class Crypt extends \Illuminate\Support\Facades\Crypt{
+        
+        /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */
+        public static function supported($key, $cipher){
+            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+        
+        /**
+         * Encrypt the given value.
+         *
+         * @param string $value
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */
+        public static function encrypt($value){
+            return \Illuminate\Encryption\Encrypter::encrypt($value);
+        }
+        
+        /**
+         * Decrypt the given value.
+         *
+         * @param string $payload
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */
+        public static function decrypt($payload){
+            return \Illuminate\Encryption\Encrypter::decrypt($payload);
+        }
+        
+        /**
+         * Get the encryption key.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getKey(){
+            return \Illuminate\Encryption\Encrypter::getKey();
         }
         
     }

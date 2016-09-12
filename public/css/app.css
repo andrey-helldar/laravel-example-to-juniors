@@ -6518,15 +6518,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em; } }
 
 body {
-  background-color: lightgrey;
+  background-color: whitesmoke;
   display: -webkit-box;
   display: flex;
   min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column; }
-  body .container {
-    background-color: whitesmoke; }
 
 main {
   -webkit-box-flex: 1;
